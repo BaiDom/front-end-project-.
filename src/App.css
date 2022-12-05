@@ -43,8 +43,20 @@
   }
 }
 
+/* @font-face{
+  font-family: ;
+  src: url()
+} */
+
 #header-title {
-  background-color: antiquewhite;
-  margin: 10px;
-  padding: 10px;
+  font-family: Baskerville;
+  font-weight: 900;
+  color: whitesmoke;
+  background: linear-gradient(#d65db1, #ff6f91);
+  background-color: #d65db1;
+  margin: 0px 10px 0px 10px;
+  padding-top: 5px;
+  border-radius: 2px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
 }

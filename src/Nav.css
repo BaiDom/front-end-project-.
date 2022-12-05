@@ -1,7 +1,19 @@
 .nav {
-  margin: 20px;
+  margin: 0px 10px 10px 10px;
+  background: linear-gradient(#ff6f91, #ff9671);
+  /* background-color: #ff6f91; */
+  border-radius: 2px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  padding-bottom: 8px;
+  padding-top: 2px;
+
+  height: 30px;
 }
 
-#nav-link {
-  padding: 5px;
+.nav-link {
+  padding: 0px 5px 5px 5px;
+  font-family: Baskerville;
+  font-weight: 900;
+  text-decoration: none;
 }

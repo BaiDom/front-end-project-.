@@ -4,10 +4,10 @@ import "../Nav.css";
 const Nav = () => {
   return (
     <nav className="nav">
-      <Link to="/" id="nav-link">
+      <Link to="/" className="nav-link" id="nav-link-home">
         Home
       </Link>
-      <Link to="/reviews" id="nav-link">
+      <Link to="/reviews" className="nav-link" id="nav-link-home">
         Reviews
       </Link>
     </nav>

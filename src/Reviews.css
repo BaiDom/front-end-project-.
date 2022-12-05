@@ -1,40 +1,74 @@
 .review-card {
-  border: 2px red solid;
-  margin: 10px;
+  margin: 10px 10px 10px 10px;
   padding: 30px;
+  padding-top: 10px;
+  border-radius: 30px;
+  border: 5px solid #ff9671;
 }
 
 .review-card * {
   margin: 10px;
+  font-family: Georgia;
+  font-weight: 900;
 }
 
 #review-title {
+  display: inline-block;
   text-decoration: underline;
-  margin-bottom: 20px;
+  margin-bottom: 0.5%;
+  padding-right: 15%;
 }
 
 #review-designer {
+  font-size: small;
+  margin-bottom: 1%;
 }
 
 #review-img {
 }
 
 #review-category {
+  margin-bottom: 1%;
 }
 
-#review-body {
-  border: 1px solid black;
-  border-radius: 5px;
+#review-card-internal {
+  border: 5px solid #ff6f91;
+  border-radius: 30px 10px;
+  padding: 3%;
+  margin: 5%;
+  margin-top: 3%;
 }
 
 #comment-count {
-  display: flex;
 }
 
 #votes {
-  display: flex;
 }
 
 #review-id {
-  display: flex;
+  display: inline-block;
+  padding-bottom: 10px;
+  float: left;
+}
+
+#review-img {
+  border-radius: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  height: 75%;
+}
+
+#review-card-ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.review-grid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  margin-bottom: 0.5%;
+  margin-top: 0.5%;
 }
