@@ -1,0 +1,40 @@
+.review-card {
+  border: 2px red solid;
+  margin: 10px;
+  padding: 30px;
+}
+
+.review-card * {
+  margin: 10px;
+}
+
+#review-title {
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+#review-designer {
+}
+
+#review-img {
+}
+
+#review-category {
+}
+
+#review-body {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#comment-count {
+  display: flex;
+}
+
+#votes {
+  display: flex;
+}
+
+#review-id {
+  display: flex;
+}
