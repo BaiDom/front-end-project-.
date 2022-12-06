@@ -15,33 +15,42 @@ const Comments = () => {
 
   return (
     <div>
-      <h2>Comments</h2>
-      <ul id="comment-ul">
-        {comments.map((comment) => {
-          return (
-            <div id="comment-grid-container">
-              <li id="comment-card">
-                <article>
-                  <div id="comment-card-internal">
-                    <p id="comment-body">{comment.body}</p>
-                  </div>
-                  <p id="comment-comment-id">
-                    Comment id: {comment.comment_id}
-                  </p>
-                  <p id="comment-review-id">Review id: {comment.review_id}</p>
-                  <p id="comment-votes">
-                    Votes for this comment: {comment.votes}
-                  </p>
-                  {/* <p id="comment-author">Posted by: {comment.author}</p> */}
-                  <p id="comment-created">
-                    Comment posted by: {comment.author} ({comment.created_at}){" "}
-                  </p>
-                </article>
-              </li>
-            </div>
-          );
-        })}
-      </ul>
+      {comments.length === 0 ? (
+        <div>
+          <p>No Comment.</p>
+        </div>
+      ) : (
+        <div>
+          <h2 id="comments-h2">Comments</h2>
+          <ul id="comment-ul">
+            {comments.map((comment) => {
+              return (
+                <div id="comment-grid-container">
+                  <li id="comment-card">
+                    <article>
+                      <div id="comment-card-internal">
+                        <p id="comment-body">{comment.body}</p>
+                      </div>
+                      <p id="comment-comment-id">
+                        Comment id: {comment.comment_id}
+                      </p>
+                      <p id="comment-review-id">
+                        Review id: {comment.review_id}
+                      </p>
+                      <p id="comment-votes">Votes: {comment.votes}</p>
+                      {/* <p id="comment-author">Posted by: {comment.author}</p> */}
+                      <p id="comment-author">
+                        Comment posted by: {comment.author}
+                      </p>
+                      <p id="comment-created">({comment.created_at})</p>
+                    </article>
+                  </li>
+                </div>
+              );
+            })}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };
