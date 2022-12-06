@@ -5,33 +5,42 @@ import "../Reviews.css";
 
 const SingleReview = () => {
   const [review, setReview] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   let { review_id } = useParams();
-
-  //   console.log(reviewId, "review_id state before");
-  //   console.log(review_id, "review id in single review");
 
   useEffect(() => {
     getReviewById(review_id).then((review) => {
       setReview(review);
-      console.log(review, "review");
+      setIsLoading(false);
     });
   }, [review_id]);
-  //   console.log(reviewId, "review id state after");
 
   return (
-    <div className="single-review-card">
-      <p id="single-review-id">Review id: {review.review_id}</p>
-      <p id="review-title">{review.title}</p>
-      <p id="review-designer">Designed by: {review.designer}</p>
-      <img src={review.review_img_url} id="review-img" alt={review.title}></img>
-      <div id="review-card-internal">
-        <p id="review-body">{review.review_body}</p>
-        <p id="single-review-category">Category: {review.category}</p>
-      </div>
-      <div className="single-review-grid-container">
-        <p id="comment-count">No. of comments: {review.comment_count}</p>
-        <p id="votes">Votes: {review.votes}</p>
-      </div>
+    <div>
+      {isLoading ? (
+        <div>
+          <p>Loading...</p>
+        </div>
+      ) : (
+        <div className="single-review-card">
+          <p id="single-review-id">Review id: {review.review_id}</p>
+          <p id="review-title">{review.title}</p>
+          <img
+            src={review.review_img_url}
+            id="review-img"
+            alt={review.title}
+          ></img>
+          <p id="review-designer">Designer: {review.designer}</p>
+          <div id="review-card-internal">
+            <p id="review-body">{review.review_body}</p>
+            <p id="single-review-category">Category: {review.category}</p>
+          </div>
+          <div className="single-review-grid-container">
+            <p id="comment-count">No. of comments: {review.comment_count}</p>
+            <p id="votes">Votes: {review.votes}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

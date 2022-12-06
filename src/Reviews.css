@@ -1,4 +1,5 @@
 .review-card {
+  background-color: #fedc9d;
   margin: 10%;
   margin-top: 2.5%;
   margin-bottom: 5%;
@@ -23,6 +24,7 @@
 }
 
 .single-review-card {
+  background-color: #fedc9d;
   margin: 10%;
   margin-top: 2.5%;
   margin-bottom: 5%;
@@ -41,16 +43,15 @@
 }
 
 #review-title {
-  color: #d65db1;
+  color: #dc44af;
   align-self: center;
   display: inline-block;
   text-decoration: underline;
-  margin-bottom: 0.5%;
 }
 
 #review-designer {
   font-size: small;
-  margin-bottom: 1%;
+  margin-bottom: 5%;
 }
 
 #review-category {
@@ -66,6 +67,7 @@
 }
 
 #review-card-internal {
+  background-color: #fff2d9;
   display: block;
   border: 5px solid #ff6f91;
   border-radius: 30px 10px;
