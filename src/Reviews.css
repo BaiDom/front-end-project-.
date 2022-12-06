@@ -13,10 +13,11 @@
 }
 
 #review-title {
+  color: #d65db1;
+  align-self: center;
   display: inline-block;
   text-decoration: underline;
   margin-bottom: 0.5%;
-  padding-right: 15%;
 }
 
 #review-designer {

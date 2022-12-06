@@ -29,12 +29,13 @@ const Reviews = () => {
                 <p id="review-category">Category: {review.category}</p>
                 <div id="review-card-internal">
                   <p id="review-body">{review.review_body}</p>
-                  <div className="review-grid-container">
-                    <p id="comment-count">
-                      No. of comments: {review.comment_count}
-                    </p>
-                    <p id="votes">Votes: {review.votes}</p>
-                  </div>
+                </div>
+
+                <div className="review-grid-container">
+                  <p id="comment-count">
+                    No. of comments: {review.comment_count}
+                  </p>
+                  <p id="votes">Votes: {review.votes}</p>
                 </div>
               </li>
             </article>
