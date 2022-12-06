@@ -2,11 +2,22 @@
   font-size: xx-large;
 }
 
-#landing-body {
+/* #landing-body {
   margin: 20px;
   font-size: x-large;
   padding: 30px;
   border: 2px solid;
   border-radius: 2px;
   border-color: #ff6f91;
+} */
+
+#landing-body {
+  color: #860186;
+  display: block;
+  border: 5px solid #ff6f91;
+  border-radius: 30px 10px;
+  padding: 5%;
+  margin: auto;
+  margin-top: 3%;
+  width: 100%;
 }

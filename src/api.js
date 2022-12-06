@@ -9,3 +9,10 @@ export const getReviews = () => {
     return reviews;
   });
 };
+
+export const getReviewById = (review_id) => {
+  console.log(review_id);
+  return gamesApi.get(`/reviews/${review_id}`).then(({ data: { review } }) => {
+    return review[0];
+  });
+};
