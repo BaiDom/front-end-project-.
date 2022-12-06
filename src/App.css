@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +41,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* @font-face{
+  font-family: ;
+  src: url()
+} */
+
+#header-title {
+  font-family: Baskerville;
+  font-weight: 900;
+  color: whitesmoke;
+  background: linear-gradient(#d65db1, #ff6f91);
+  background-color: #d65db1;
+  margin: 0px 10px 0px 10px;
+  padding-top: 5px;
+  border-radius: 2px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
