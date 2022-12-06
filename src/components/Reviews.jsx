@@ -46,9 +46,9 @@ const Reviews = () => {
                           No. of comments: {review.comment_count}
                         </p>
                         <p id="votes">Votes: {review.votes}</p>
+                        <p id="review-category">Category: {review.category}</p>
                       </div>
                     </div>
-                    <p id="review-category">Category: {review.category}</p>
                   </li>
                 </article>
               </Link>

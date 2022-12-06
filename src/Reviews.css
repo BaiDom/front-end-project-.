@@ -15,6 +15,23 @@
   font-weight: 900;
 }
 
+.single-review-card * {
+  color: #860186;
+  margin: 10px;
+  font-family: Georgia;
+  font-weight: 900;
+}
+
+.single-review-card {
+  margin: 10%;
+  margin-top: 2.5%;
+  margin-bottom: 5%;
+  padding: 30px;
+  padding-top: 10px;
+  border-radius: 30px;
+  border: 5px solid #ff9671;
+}
+
 #review-title {
   color: #d65db1;
   align-self: center;
@@ -29,7 +46,9 @@
 }
 
 #review-category {
-  margin-bottom: 1%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 #review-card-internal {
@@ -44,10 +63,12 @@
 
 #comment-count {
   margin: auto;
+  padding: 10%;
 }
 
 #votes {
   margin: auto;
+  padding: 10%;
 }
 
 #review-id {
@@ -60,8 +81,8 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
-  height: 50%;
+  width: 90%;
+  height: 90%;
 }
 
 #review-card-ul {
