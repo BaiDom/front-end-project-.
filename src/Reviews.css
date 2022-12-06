@@ -80,12 +80,16 @@
 
 #comment-count {
   margin: auto;
-  padding: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 2%;
 }
 
 #votes {
   margin: auto;
-  padding: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 2%;
 }
 
 #review-id {
@@ -130,4 +134,7 @@
 
 #review-card-link {
   text-decoration: none;
+}
+
+#comments-link {
 }

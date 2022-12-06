@@ -40,9 +40,14 @@ const Reviews = () => {
                     ></img>
                     <div className="review-grid-container">
                       <div id="review-card-internal">
-                        <p id="comment-count">
-                          No. of comments: {review.comment_count}
-                        </p>
+                        <Link
+                          to={`/reviews/${review.review_id}/comments`}
+                          id="comments-link"
+                        >
+                          <p id="comment-count">
+                            No. of comments: {review.comment_count}
+                          </p>
+                        </Link>
                         <p id="votes">Votes: {review.votes}</p>
                         <p id="review-category">Category: {review.category}</p>
                       </div>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { getReviewById } from "../api";
 import "../Reviews.css";
 
@@ -36,7 +36,12 @@ const SingleReview = () => {
             <p id="single-review-category">Category: {review.category}</p>
           </div>
           <div className="single-review-grid-container">
-            <p id="comment-count">No. of comments: {review.comment_count}</p>
+            <Link
+              to={`/reviews/${review.review_id}/comments`}
+              id="comments-link"
+            >
+              <p id="comment-count">No. of comments: {review.comment_count}</p>
+            </Link>
             <p id="votes">Votes: {review.votes}</p>
           </div>
         </div>
