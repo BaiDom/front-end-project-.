@@ -32,6 +32,14 @@
   border: 5px solid #ff9671;
 }
 
+#single-review-title {
+  color: #d65db1;
+  align-self: center;
+  display: inline-block;
+  text-decoration: underline;
+  margin-bottom: 0.5%;
+}
+
 #review-title {
   color: #d65db1;
   align-self: center;
@@ -49,6 +57,12 @@
   margin: auto;
   margin-top: 5%;
   margin-bottom: 5%;
+}
+
+#single-review-category {
+  margin: 10%;
+  margin-top: 20%;
+  margin-bottom: 10%;
 }
 
 #review-card-internal {
@@ -94,6 +108,17 @@
 .review-grid-container {
   display: inline-grid;
   grid-template-columns: auto auto auto;
+  padding: 5%;
+  margin: auto;
+  margin-bottom: 0.5%;
+  margin-top: 0.5%;
+}
+
+.single-review-grid-container {
+  /* border: 1px solid black; */
+  display: inline-grid;
+  grid-template: auto auto auto;
+  gap: 10%;
   padding: 5%;
   margin: auto;
   margin-bottom: 0.5%;
