@@ -1,0 +1,110 @@
+#comment-ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#comments-h2 {
+  font-family: Georgia;
+  font-weight: 900;
+  color: #860186;
+  font-size: 6vw;
+}
+
+#comment-card {
+  color: #860186;
+  list-style-type: none;
+  background-color: #fcdea6;
+  margin: auto;
+  margin-top: 2.5%;
+  margin-bottom: 0.1%;
+  padding: 2%;
+  border-radius: 30px;
+  border: 5px solid #ff9671;
+  font-family: Georgia;
+  font-weight: 900;
+  width: 90%;
+}
+
+#comment-card-internal {
+  background-color: #fce8c3;
+  display: block;
+  border: 5px solid #ff6f91;
+  border-radius: 30px 30px 30px 2px;
+  padding: 5%;
+  margin: auto;
+  margin-top: 1%;
+  margin-bottom: 3%;
+  width: 100%;
+  font-family: Georgia;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+#no-comments-text {
+  color: #860186;
+  list-style-type: none;
+  background-color: #fcdea6;
+  margin: auto;
+  margin-top: 2.5%;
+  margin-bottom: 0.1%;
+  padding: 2%;
+  border-radius: 30px;
+  border: 5px solid #ff9671;
+  font-family: Georgia;
+  font-weight: 900;
+  width: 90%;
+}
+
+#loading-text {
+  color: #860186;
+  list-style-type: none;
+  background-color: #fcdea6;
+  margin: auto;
+  margin-top: 2.5%;
+  margin-bottom: 0.1%;
+  padding: 2%;
+  border-radius: 30px;
+  border: 5px solid #ff9671;
+  font-family: Georgia;
+  font-weight: 900;
+  width: 90%;
+}
+
+#comment-created {
+  font-size: 4vw;
+  padding: 0.5%;
+}
+
+#comment-comment-id {
+  font-size: 4vw;
+  padding: 0.5%;
+}
+
+#comment-review-id {
+  font-size: 4vw;
+  padding: 0.5%;
+}
+
+#comment-votes {
+  font-size: 4vw;
+  padding: 0.5%;
+}
+
+#comment-author {
+  font-size: 4vw;
+  padding: 0.5%;
+}
+
+#comment-body {
+  font-size: 6vw;
+}
+
+/* #comment-grid-container {
+  display: grid;
+  grid-template: min-content;
+  padding: 5%;
+  margin: auto;
+  margin-bottom: 0.5%;
+  margin-top: 0.5%;
+} */
