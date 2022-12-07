@@ -17,7 +17,10 @@ const Comments = () => {
     <div>
       {comments.length === 0 ? (
         <div>
-          <p>No Comment.</p>
+          <p>
+            There are currently no comments for this review, maybe in the future
+            you will be able to add one...
+          </p>
         </div>
       ) : (
         <div>
@@ -38,7 +41,6 @@ const Comments = () => {
                         Review id: {comment.review_id}
                       </p>
                       <p id="comment-votes">Votes: {comment.votes}</p>
-                      {/* <p id="comment-author">Posted by: {comment.author}</p> */}
                       <p id="comment-author">
                         Comment posted by: {comment.author}
                       </p>

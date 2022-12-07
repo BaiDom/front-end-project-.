@@ -31,7 +31,7 @@ const SingleReview = () => {
             id="review-img"
             alt={review.title}
           ></img>
-          <div id="review-card-internal">
+          <div id="single-review-card-internal">
             <p id="review-body">{review.review_body}</p>
             <p id="single-review-category">Category: {review.category}</p>
           </div>

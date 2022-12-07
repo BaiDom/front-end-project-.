@@ -16,6 +16,7 @@ const Reviews = () => {
 
   return (
     <div>
+      <h2 id="reviews-h2">Reviews</h2>
       {isLoading ? (
         <div>
           <p>Loading...</p>
@@ -52,6 +53,7 @@ const Reviews = () => {
                         <p id="review-category">Category: {review.category}</p>
                       </div>
                     </div>
+                    <p id="click">Click to see more!</p>
                   </li>
                 </article>
               </Link>
