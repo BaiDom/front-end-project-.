@@ -19,7 +19,7 @@ const SingleReview = () => {
     <div>
       {isLoading ? (
         <div>
-          <p>Loading...</p>
+          <p id="loading-text">Loading Review...</p>
         </div>
       ) : (
         <div className="single-review-card">

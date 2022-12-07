@@ -19,7 +19,7 @@ const Reviews = () => {
       <h2 id="reviews-h2">Reviews</h2>
       {isLoading ? (
         <div>
-          <p>Loading...</p>
+          <p id="loading-text">Loading Reviews...</p>
         </div>
       ) : (
         <ul id="review-card-ul">

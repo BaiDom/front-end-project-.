@@ -41,6 +41,36 @@
   font-size: 1.5rem;
 }
 
+#no-comments-text {
+  color: #860186;
+  list-style-type: none;
+  background-color: #fcdea6;
+  margin: auto;
+  margin-top: 2.5%;
+  margin-bottom: 0.1%;
+  padding: 2%;
+  border-radius: 30px;
+  border: 5px solid #ff9671;
+  font-family: Georgia;
+  font-weight: 900;
+  width: 90%;
+}
+
+#loading-text {
+  color: #860186;
+  list-style-type: none;
+  background-color: #fcdea6;
+  margin: auto;
+  margin-top: 2.5%;
+  margin-bottom: 0.1%;
+  padding: 2%;
+  border-radius: 30px;
+  border: 5px solid #ff9671;
+  font-family: Georgia;
+  font-weight: 900;
+  width: 90%;
+}
+
 #comment-created {
   font-size: 4vw;
   padding: 0.5%;
