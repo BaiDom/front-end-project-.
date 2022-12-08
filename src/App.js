@@ -9,6 +9,7 @@ import SingleReview from "./components/Single-review";
 import Comments from "./components/Comments";
 
 function App() {
+  // const [vote, setVote] = useState(0);
   return (
     <div className="App">
       <Header className="App-header" />

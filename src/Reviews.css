@@ -36,7 +36,7 @@
 }
 
 #single-review-title {
-  color: #d65db1;
+  color: #d037a2;
   align-self: center;
   display: inline-block;
   text-decoration: underline;
@@ -46,39 +46,40 @@
 }
 
 #review-title {
-  color: #d65db1;
+  color: #d037a2;
   align-self: center;
   display: inline-block;
   text-decoration: underline;
   margin: auto;
   margin-bottom: 0.5%;
   margin-top: 2%;
-  font-size: 7vw;
+  font-size: 3.5vw;
   word-wrap: break-word;
 }
 
 #review-designer {
-  font-size: 5vw;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  font-size: 3vw;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 #click {
-  font-size: 5vw;
+  font-size: 3vw;
+  margin-top: 1%;
 }
 
 #review-category {
   margin: auto;
-  margin-top: 10%;
-  margin-bottom: 10%;
-  font-size: 5vw;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  font-size: 3vw;
 }
 
 #single-review-category {
-  margin: 10%;
-  margin-top: 20%;
-  margin-bottom: 10%;
-  font-size: 5vw;
+  margin: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  font-size: 3vw;
 }
 
 #review-card-internal {
@@ -86,7 +87,7 @@
   display: block;
   border: 5px solid #ff6f91;
   border-radius: 30px 10px;
-  padding: 10%;
+  padding: 1%;
   margin: auto;
   margin-top: 3%;
   margin-bottom: 5%;
@@ -106,18 +107,45 @@
 
 #comment-count {
   margin: auto;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 1%;
   padding: 2%;
-  font-size: 5vw;
+  font-size: 3vw;
+}
+
+#single-review-comment-count {
+  margin: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  padding: 1%;
+  font-size: 3vw;
 }
 
 #votes {
   margin: auto;
-  margin-top: 5%;
-  margin-bottom: 10%;
+  margin-top: 1%;
+  margin-bottom: 1%;
   padding: 2%;
-  font-size: 5vw;
+  font-size: 3vw;
+}
+
+/* #review-vote-container {
+  border: 4px solid #ff9671;
+  border-radius: 20px 20px;
+  padding: 2%;
+} */
+
+#single-review-vote-container {
+  border: 4px solid #ff9671;
+  border-radius: 20px 20px;
+  padding: 2%;
+}
+
+#single-review-votes {
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 2%;
+  font-size: 3vw;
 }
 
 #review-id {
@@ -127,11 +155,11 @@
 }
 
 #single-review-id {
-  font-size: 5.5vw;
+  font-size: 4vw;
 }
 
 #review-body {
-  font-size: 5vw;
+  font-size: 4vw;
 }
 
 #review-img {
@@ -139,8 +167,8 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
-  height: 90%;
+  width: 50%;
+  height: 50%;
 }
 
 #review-card-ul {
@@ -169,11 +197,11 @@
   margin-top: 0.5%;
 } */
 
-#review-card-link {
+.review-card-link {
   text-decoration: none;
 }
 
-#comments-link {
+.comments-link {
   font-size: 1.5rem;
 }
 
@@ -197,4 +225,22 @@
   font-family: Georgia;
   font-weight: 900;
   width: 90%;
+}
+
+.review-vote-button {
+  border-radius: 5px;
+  margin: 1%;
+  min-width: 30%;
+  max-width: 50%;
+  font-size: 5vw;
+}
+
+#reviews-down-vote {
+  margin-bottom: 5%;
+  margin-top: 1%;
+}
+
+#single-rev-down-vote {
+  margin-bottom: 5%;
+  margin-top: 1%;
 }

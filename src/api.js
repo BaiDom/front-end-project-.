@@ -20,7 +20,17 @@ export const getCommentsForReview = (review_id) => {
   return gamesApi
     .get(`/reviews/${review_id}/comments`)
     .then(({ data: { reviews } }) => {
-      console.log(reviews, "reviews from api");
       return reviews;
+    });
+};
+
+export const updateUpVotes = (review_id, vote) => {
+  const patchBody = {
+    inc_votes: vote,
+  };
+  return gamesApi
+    .patch(`/reviews/${review_id}`, patchBody)
+    .then(({ data: { review } }) => {
+      return review[0];
     });
 };

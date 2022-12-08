@@ -30,27 +30,29 @@ const Comments = () => {
             </div>
           ) : (
             <div>
-              <h2 id="comments-h2">Comments</h2>
+              <h2 id="comments-h2">Comments.</h2>
               <ul id="comment-ul">
                 {comments.map((comment) => {
                   return (
                     <div id="comment-grid-container">
                       <li id="comment-card">
-                        <article>
-                          <div id="comment-card-internal">
-                            <p id="comment-body">{comment.body}</p>
-                          </div>
-                          <p id="comment-comment-id">
-                            Comment id: {comment.comment_id}
-                          </p>
+                        <article id="comment-article">
                           <p id="comment-review-id">
                             Review id: {comment.review_id}
                           </p>
-                          <p id="comment-votes">Votes: {comment.votes}</p>
-                          <p id="comment-author">
-                            Comment posted by: {comment.author}
+                          <p id="comment-votes">
+                            Votes for this review: {comment.votes}
                           </p>
-                          <p id="comment-created">({comment.created_at})</p>
+                          <div id="comment-card-internal">
+                            <p id="comment-body">{comment.body}</p>
+                            <p id="comment-comment-id">
+                              Comment id: {comment.comment_id}
+                            </p>
+                            <p id="comment-author">
+                              Comment posted by: {comment.author}
+                            </p>
+                            <p id="comment-created">({comment.created_at})</p>
+                          </div>
                         </article>
                       </li>
                     </div>
