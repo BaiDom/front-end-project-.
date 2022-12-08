@@ -15,50 +15,6 @@ const Reviews = () => {
     });
   }, []);
 
-  // const handleUpVote = (review_id) => {
-  //   setReviews((currReviews) => {
-  //     return currReviews.map((review) => {
-  //       if (review.review_id === review_id) {
-  //         return { ...review, votes: review.votes + 1 };
-  //       }
-  //       return review;
-  //     });
-  //   });
-  //   updateUpVotes(review_id).catch((err) => {
-  //     setReviews((currReviews) => {
-  //       return currReviews.map((review) => {
-  //         if (review.review_id === review_id) {
-  //           return { ...review, votes: review.votes + 1 };
-  //         }
-  //         return review;
-  //       });
-  //     });
-  //     setErr("Oopsie something went wrong! Give it another go eh?");
-  //   });
-  // };
-
-  // const handleDownVote = (review_id) => {
-  //   setReviews((currReviews) => {
-  //     return currReviews.map((review) => {
-  //       if (review.review_id === review_id) {
-  //         return { ...review, votes: review.votes - 1 };
-  //       }
-  //       return review;
-  //     });
-  //   });
-  //   updateDownVotes(review_id).catch((err) => {
-  //     setReviews((currReviews) => {
-  //       return currReviews.map((review) => {
-  //         if (review.review_id === review_id) {
-  //           return { ...review, votes: review.votes - 1 };
-  //         }
-  //         return review;
-  //       });
-  //     });
-  //     setErr("Oopsie something went wrong! Give it another go eh?");
-  //   });
-  // };
-
   if (err) return <p>{err}</p>;
 
   return (
@@ -103,24 +59,6 @@ const Reviews = () => {
                       </Link>
                       <div id="review-vote-container">
                         <p id="votes">Votes for this review: {review.votes}</p>
-                        {/* <button
-                          className="review-vote-button"
-                          id="reviews-up-vote"
-                          onClick={() => {
-                            handleUpVote(review.review_id);
-                          }}
-                        >
-                          👍
-                        </button>
-                        <button
-                          className="review-vote-button"
-                          id="reviews-down-vote"
-                          onClick={() => {
-                            handleDownVote(review.review_id);
-                          }}
-                        >
-                          👎
-                        </button> */}
                       </div>
                     </div>
                   </div>
