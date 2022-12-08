@@ -42,3 +42,9 @@ export const postComment = (review_id, commentObj) => {
       return comment;
     });
 };
+
+export const getCategories = () => {
+  return gamesApi.get("/api/categegories").then(({ Data }) => {
+    console.log(Data, "data for categories");
+  });
+};

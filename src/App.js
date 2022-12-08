@@ -7,7 +7,7 @@ import Reviews from "./components/Reviews";
 import Landing from "./components/Landing";
 import SingleReview from "./components/Single-review";
 import Comments from "./components/Comments";
-import PostComments from "./components/Post-comment";
+import Categories from "./components/Categories";
 
 function App() {
   const [user, setUser] = useState("cooljmessy");
@@ -23,6 +23,7 @@ function App() {
           path="/reviews/:review_id/comments"
           element={<Comments user={user} setUser={setUser} />}
         ></Route>
+        <Route path="/api/categories" element={<Categories />}></Route>
       </Routes>
     </div>
   );

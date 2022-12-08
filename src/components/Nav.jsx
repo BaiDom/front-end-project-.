@@ -10,6 +10,9 @@ const Nav = ({ user }) => {
       <Link to="/reviews" className="nav-link" id="nav-link-reviews">
         Reviews
       </Link>
+      <Link to="/api/categories" className="nav-link" id="nav-link-categories">
+        Categories
+      </Link>
       {/* <section id="nav-user-container"><p>User: {user}</p></section> */}
     </nav>
   );

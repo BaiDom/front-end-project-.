@@ -59,7 +59,6 @@ const Comments = ({ user, setUser }) => {
                 There are currently no comments for this review, would you like
                 to add one?
               </p>
-
               <PostComment
                 newComment={newComment}
                 setNewComment={setNewComment}
