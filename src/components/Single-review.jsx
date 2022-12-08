@@ -14,7 +14,6 @@ const SingleReview = () => {
     getReviewById(review_id).then((review) => {
       setReview(review);
       setVote(review.votes);
-      console.log(review, "review");
       setIsLoading(false);
     });
   }, [review_id]);
@@ -36,8 +35,8 @@ const SingleReview = () => {
         </div>
       ) : (
         <div className="single-review-card">
-          <p id="single-review-id">Review id: {review.review_id}</p>
-          <p id="review-title">{review.title}</p>
+          <p id="single-review-id">- Review id: {review.review_id} -</p>
+          <p id="single-review-title">{review.title}</p>
           <p id="review-designer">Designed by: {review.designer}</p>
           <p id="single-review-category">Category: {review.category}</p>
           <img

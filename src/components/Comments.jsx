@@ -38,7 +38,7 @@ const Comments = () => {
                       <li id="comment-card">
                         <article id="comment-article">
                           <p id="comment-review-id">
-                            Review id: {comment.review_id}
+                            - Review id: {comment.review_id} -
                           </p>
                           <p id="comment-votes">
                             Votes for this review: {comment.votes}
@@ -46,7 +46,7 @@ const Comments = () => {
                           <div id="comment-card-internal">
                             <p id="comment-body">{comment.body}</p>
                             <p id="comment-comment-id">
-                              Comment id: {comment.comment_id}
+                              - Comment id: {comment.comment_id} -
                             </p>
                             <p id="comment-author">
                               Comment posted by: {comment.author}
