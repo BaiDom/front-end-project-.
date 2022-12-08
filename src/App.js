@@ -7,20 +7,21 @@ import Reviews from "./components/Reviews";
 import Landing from "./components/Landing";
 import SingleReview from "./components/Single-review";
 import Comments from "./components/Comments";
+import PostComments from "./components/Post-comment";
 
 function App() {
-  // const [vote, setVote] = useState(0);
+  const [user, setUser] = useState("cooljmessy");
   return (
     <div className="App">
-      <Header className="App-header" />
-      <Nav />
+      <Header className="App-header" user={user} />
+      <Nav user={user} />
       <Routes>
         <Route path="/reviews" element={<Reviews />}></Route>
         <Route path="/" element={<Landing />}></Route>
         <Route path="/reviews/:review_id" element={<SingleReview />}></Route>
         <Route
           path="/reviews/:review_id/comments"
-          element={<Comments />}
+          element={<Comments user={user} setUser={setUser} />}
         ></Route>
       </Routes>
     </div>

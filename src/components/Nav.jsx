@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../Nav.css";
 
-const Nav = () => {
+const Nav = ({ user }) => {
   return (
     <nav className="nav">
       <Link to="/" className="nav-link" id="nav-link-home">
@@ -10,6 +10,7 @@ const Nav = () => {
       <Link to="/reviews" className="nav-link" id="nav-link-reviews">
         Reviews
       </Link>
+      {/* <section id="nav-user-container"><p>User: {user}</p></section> */}
     </nav>
   );
 };

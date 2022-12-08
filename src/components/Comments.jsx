@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getCommentsForReview } from "../api";
+import { getCommentsForReview, postComment } from "../api";
 import "../Comments.css";
+import PostComment from "./Post-comment";
+import swal from "sweetalert";
 
-const Comments = () => {
+const Comments = ({ user, setUser }) => {
   const [comments, setComments] = useState([]);
+  const [newComment, setNewComment] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const [err, setErr] = useState(null);
   let { review_id } = useParams();
 
   useEffect(() => {
@@ -14,6 +18,34 @@ const Comments = () => {
       setIsLoading(false);
     });
   }, [review_id]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const commentObj = {
+      username: user,
+      body: newComment,
+    };
+
+    const form = document.forms["comment-form"]["comment-form-input"].value;
+    if (form === "") {
+      swal("Hold up!", "Cannot post empty comment!", "error");
+      return false;
+    } else {
+      postComment(review_id, commentObj)
+        .then((commentFromApi) => {
+          setNewComment("");
+          setComments((currComments) => {
+            const newComments = [...currComments];
+            newComments.unshift(commentFromApi);
+            return newComments;
+          });
+        })
+        .then(swal("Awesome!", "Thanks for commenting", "success"))
+        .catch((err) => {
+          setErr("Oopsie something went wrong! Give it another go eh?");
+        });
+    }
+  };
 
   return (
     <div>
@@ -24,13 +56,28 @@ const Comments = () => {
           {comments.length === 0 ? (
             <div id="no-comments-text">
               <p>
-                There are currently no comments for this review, maybe in the
-                future you will be able to add one...
+                There are currently no comments for this review, would you like
+                to add one?
               </p>
+
+              <PostComment
+                newComment={newComment}
+                setNewComment={setNewComment}
+                handleSubmit={handleSubmit}
+                user={user}
+              />
             </div>
           ) : (
             <div>
               <h2 id="comments-h2">Comments.</h2>
+              <div id="comment-card">
+                <PostComment
+                  newComment={newComment}
+                  setNewComment={setNewComment}
+                  handleSubmit={handleSubmit}
+                  user={user}
+                />
+              </div>
               <ul id="comment-ul">
                 {comments.map((comment) => {
                   return (
@@ -66,5 +113,10 @@ const Comments = () => {
     </div>
   );
 };
+
+// if (commentObj.body === "") {
+//   setErr("Cannot post empty comment!");
+//   return <p>{err}</p>;
+// }
 
 export default Comments;

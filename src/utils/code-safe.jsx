@@ -1,5 +1,3 @@
-import Reviews from "../components/Reviews";
-
 {
   /* <button
                           className="review-vote-button"
