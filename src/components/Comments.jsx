@@ -55,9 +55,8 @@ const Comments = ({ user, setUser }) => {
         <div>
           {comments.length === 0 ? (
             <div id="no-comments-text">
-              <p>
-                There are currently no comments for this review, would you like
-                to add one?
+              <p id="no-comments-info">
+                There are no comments for this review yet...
               </p>
               <PostComment
                 newComment={newComment}

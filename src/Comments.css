@@ -56,6 +56,12 @@
   width: 90%;
 }
 
+#no-comments-info {
+  font-family: Georgia;
+  font-size: 4vw;
+  font-weight: 900;
+}
+
 #loading-text {
   color: #860186;
   list-style-type: none;

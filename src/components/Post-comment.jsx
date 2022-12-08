@@ -9,7 +9,7 @@ const PostComment = ({ newComment, setNewComment, handleSubmit, user }) => {
         onSubmit={handleSubmit}
       >
         <label htmlFor="newComment" id="add-comment-text">
-          Add a comment for this review
+          Add a comment for this review!
         </label>
         <textarea
           name="comment-form-input"

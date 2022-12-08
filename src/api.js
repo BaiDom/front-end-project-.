@@ -44,7 +44,7 @@ export const postComment = (review_id, commentObj) => {
 };
 
 export const getCategories = () => {
-  return gamesApi.get("/api/categegories").then(({ Data }) => {
-    console.log(Data, "data for categories");
+  return gamesApi.get("/categories").then(({ data: { categories } }) => {
+    return categories;
   });
 };
