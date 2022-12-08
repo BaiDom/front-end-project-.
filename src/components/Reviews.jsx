@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../Reviews.css";
 import { getReviews } from "../api";
+import ReviewsCategory from "./Reviews-category";
 
-const Reviews = () => {
+const Reviews = ({ currCategory, setCurrCategory }) => {
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [err, setErr] = useState(null);
@@ -14,6 +15,14 @@ const Reviews = () => {
       setIsLoading(false);
     });
   }, []);
+
+  if (currCategory !== "")
+    return (
+      <ReviewsCategory
+        currCategory={currCategory}
+        setCurrCategory={setCurrCategory}
+      />
+    );
 
   if (err) return <p>{err}</p>;
 

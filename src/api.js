@@ -48,3 +48,12 @@ export const getCategories = () => {
     return categories;
   });
 };
+
+export const getReviewByCategory = (currCategory) => {
+  return gamesApi
+    .get(`/reviews?category=${currCategory}`)
+    .then(({ data: { reviews } }) => {
+      console.log(currCategory, "currCategory in api");
+      return reviews;
+    });
+};

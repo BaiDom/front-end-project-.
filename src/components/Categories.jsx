@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { getCategories } from "../api";
 import "../Category-list.css";
 
-const Categories = () => {
+const Categories = ({ currCategory, setCurrCategory }) => {
   const [categoryList, setCategoryList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -25,7 +26,16 @@ const Categories = () => {
           {categoryList.map((category) => {
             return (
               <article id="category-list-card">
-                <p id="category-title"> Category: {category.slug}</p>
+                <Link
+                  to={`/reviews?category=${category.slug}`}
+                  key={category.slug}
+                  id={`category-link-${category.slug}`}
+                  onClick={() => {
+                    setCurrCategory(category.slug);
+                  }}
+                >
+                  <p id="category-title"> Category: {category.slug}</p>
+                </Link>
                 <p id="category-description">
                   Description: {category.description}
                 </p>
