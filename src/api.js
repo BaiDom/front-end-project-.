@@ -34,3 +34,17 @@ export const updateUpVotes = (review_id, vote) => {
       return review[0];
     });
 };
+
+export const postComment = (review_id, commentObj) => {
+  return gamesApi
+    .post(`/reviews/${review_id}/comments`, commentObj)
+    .then(({ data: { comment } }) => {
+      return comment;
+    });
+};
+
+export const getCategories = () => {
+  return gamesApi.get("/api/categegories").then(({ Data }) => {
+    console.log(Data, "data for categories");
+  });
+};
