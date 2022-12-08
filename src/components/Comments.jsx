@@ -114,9 +114,4 @@ const Comments = ({ user, setUser }) => {
   );
 };
 
-// if (commentObj.body === "") {
-//   setErr("Cannot post empty comment!");
-//   return <p>{err}</p>;
-// }
-
 export default Comments;
