@@ -3,22 +3,28 @@ import { Link, useParams } from "react-router-dom";
 import { getReviews } from "../api";
 import "../Reviews.css";
 
-const ReviewsCategory = ({ currCategory, setCurrCategory }) => {
+const ReviewsCategory = ({
+  currCategory,
+  setCurrCategory,
+  sortBy,
+  setSortBy,
+}) => {
   const [categoryList, setCategoryList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   let { category } = useParams();
 
   useEffect(() => {
-    getReviews(category).then((reviews) => {
+    getReviews(sortBy, currCategory).then((reviews) => {
       setCategoryList(reviews);
       setIsLoading(false);
     });
-  }, [category]);
+  }, [currCategory]);
 
   return (
     <section>
       <h2 id="reviews-h2">Reviews for {currCategory} Games.</h2>
+
       {isLoading ? (
         <div>
           <p id="loading-text">Loading Reviews for {currCategory} Games...</p>

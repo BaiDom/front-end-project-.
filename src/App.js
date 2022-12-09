@@ -9,11 +9,11 @@ import SingleReview from "./components/Single-review";
 import Comments from "./components/Comments";
 import Categories from "./components/Categories";
 import ReviewsCategory from "./components/Reviews-category";
-import ReviewSort from "./components/Reviews-sort";
 
 function App() {
   const [user, setUser] = useState("cooljmessy");
-  const [currCategory, setCurrCategory] = useState("");
+  const [currCategory, setCurrCategory] = useState(null);
+  const [sortBy, setSortBy] = useState(null);
   return (
     <div className="App">
       <Header className="App-header" user={user} />
@@ -29,6 +29,8 @@ function App() {
             <Reviews
               currCategory={currCategory}
               setCurrCategory={setCurrCategory}
+              sortBy={sortBy}
+              setSortBy={setSortBy}
             />
           }
         ></Route>
@@ -41,13 +43,14 @@ function App() {
           path="/reviews/:review_id/comments"
           element={<Comments user={user} setUser={setUser} />}
         ></Route>
-        <Route path="/:sort_by" element={<ReviewSort />}></Route>
         <Route
           path="/:category"
           element={
             <ReviewsCategory
               currCategory={currCategory}
               setCurrCategory={setCurrCategory}
+              sortBy={sortBy}
+              setSortBy={setSortBy}
             />
           }
         ></Route>

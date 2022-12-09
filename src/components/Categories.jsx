@@ -25,20 +25,21 @@ const Categories = ({ currCategory, setCurrCategory }) => {
         <section id="category-card-container">
           {categoryList.map((category) => {
             return (
-              <article id="category-list-card" key={category.slug}>
-                <Link
-                  to={`/${category.slug}`}
-                  id={`category-link-${category.slug}`}
-                  onClick={() => {
-                    setCurrCategory(category.slug);
-                  }}
-                >
+              <Link
+                to={`/${category.slug}`}
+                id={`category-link-${category.slug}`}
+                className="category-link"
+                onClick={() => {
+                  setCurrCategory(category.slug);
+                }}
+              >
+                <article id="category-list-card" key={category.slug}>
                   <p id="category-title"> Category: {category.slug}</p>
-                </Link>
-                <p id="category-description">
-                  Description: {category.description}
-                </p>
-              </article>
+                  <p id="category-description">
+                    Description: {category.description}
+                  </p>
+                </article>
+              </Link>
             );
           })}
         </section>

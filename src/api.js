@@ -4,12 +4,14 @@ const gamesApi = axios.create({
   baseURL: "https://dead-puce-abalone-cap.cyclic.app/api",
 });
 
-export const getReviews = (category) => {
-  return gamesApi
-    .get("/reviews", { params: { category } })
-    .then(({ data: { reviews } }) => {
-      return reviews;
-    });
+export const getReviews = (sort_by, category) => {
+  let params = {
+    category: category,
+    sort_by: sort_by,
+  };
+  return gamesApi.get("/reviews", { params }).then(({ data: { reviews } }) => {
+    return reviews;
+  });
 };
 
 export const getReviewById = (review_id) => {

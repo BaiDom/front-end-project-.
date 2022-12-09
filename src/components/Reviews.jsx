@@ -1,22 +1,23 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "../Reviews.css";
 import { getReviews } from "../api";
 import ReviewsCategory from "./Reviews-category";
+import ReviewSort from "./Sort-func";
 
-const Reviews = ({ currCategory, setCurrCategory }) => {
+const Reviews = ({ currCategory, setCurrCategory, sortBy, setSortBy }) => {
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [err, setErr] = useState(null);
 
   useEffect(() => {
-    getReviews().then((reviews) => {
+    getReviews(sortBy, currCategory).then((reviews) => {
       setReviews(reviews);
       setIsLoading(false);
     });
-  }, []);
+  }, [sortBy, currCategory]);
 
-  if (currCategory !== "")
+  if (currCategory !== null)
     return (
       <ReviewsCategory
         currCategory={currCategory}
@@ -29,6 +30,7 @@ const Reviews = ({ currCategory, setCurrCategory }) => {
   return (
     <div>
       <h2 id="reviews-h2">Reviews.</h2>
+      <ReviewSort sortBy={sortBy} setSortBy={setSortBy} />
       {isLoading ? (
         <div>
           <p id="loading-text">Loading Reviews...</p>

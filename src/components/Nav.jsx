@@ -12,7 +12,7 @@ const Nav = ({ user, currCategory, setCurrCategory, review, setReview }) => {
         className="nav-link"
         id="nav-link-reviews"
         onClick={() => {
-          setCurrCategory("");
+          // setCurrCategory("");
           setReview("");
         }}
       >

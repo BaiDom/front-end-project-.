@@ -50,3 +50,7 @@
   font-size: 6vw;
   margin-bottom: 1.5%;
 }
+
+.category-link {
+  text-decoration: none;
+}
