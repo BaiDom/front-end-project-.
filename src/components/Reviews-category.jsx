@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { getReviewByCategory, getReviews } from "../api";
+import { getReviews } from "../api";
 import "../Reviews.css";
 
 const ReviewsCategory = ({ currCategory, setCurrCategory }) => {
@@ -27,10 +27,13 @@ const ReviewsCategory = ({ currCategory, setCurrCategory }) => {
         <section>
           {categoryList.map((review) => {
             return (
-              <article className="review-card" id="review-cat-card">
+              <article
+                className="review-card"
+                id="review-cat-card"
+                key={review.review_id}
+              >
                 <Link
                   to={`/reviews/${review.review_id}`}
-                  key={review.id}
                   className="review-card-link"
                   id={`review-card-link-${review.review_id}`}
                 >

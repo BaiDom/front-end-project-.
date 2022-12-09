@@ -76,10 +76,13 @@ const Comments = ({ user, review }) => {
                   user={user}
                 />
               </div>
-              <ul id="comment-ul">
+              <ul id="comment-ul" key={`ul-${newComment.review_id}`}>
                 {comments.map((comment) => {
                   return (
-                    <div id="comment-grid-container">
+                    <div
+                      id="comment-grid-container"
+                      key={`comment-${comment.comment_id}`}
+                    >
                       <li id="comment-card">
                         <article id="comment-article">
                           <p id="comment-review-id">

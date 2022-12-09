@@ -37,13 +37,12 @@ const Reviews = ({ currCategory, setCurrCategory }) => {
         <ul id="review-card-ul">
           {reviews.map((review) => {
             return (
-              <article key={review.id}>
-                <li key={review.id} className="review-card">
+              <article key={`${review.review_id}`}>
+                <li className="review-card">
                   <p id="review-title">{review.title}</p>
                   <div id="review-card-internal">
                     <Link
                       to={`/reviews/${review.review_id}`}
-                      key={review.id}
                       className="review-card-link"
                       id={`review-card-link-${review.review_id}`}
                     >

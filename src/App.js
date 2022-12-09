@@ -9,6 +9,7 @@ import SingleReview from "./components/Single-review";
 import Comments from "./components/Comments";
 import Categories from "./components/Categories";
 import ReviewsCategory from "./components/Reviews-category";
+import ReviewSort from "./components/Reviews-sort";
 
 function App() {
   const [user, setUser] = useState("cooljmessy");
@@ -37,17 +38,18 @@ function App() {
           element={<SingleReview user={user} />}
         ></Route>
         <Route
-          path={`/:category`}
+          path="/reviews/:review_id/comments"
+          element={<Comments user={user} setUser={setUser} />}
+        ></Route>
+        <Route path="/:sort_by" element={<ReviewSort />}></Route>
+        <Route
+          path="/:category"
           element={
             <ReviewsCategory
               currCategory={currCategory}
               setCurrCategory={setCurrCategory}
             />
           }
-        ></Route>
-        <Route
-          path="/reviews/:review_id/comments"
-          element={<Comments user={user} setUser={setUser} />}
         ></Route>
         <Route
           path="/categories"

@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getReviewById, updateUpVotes } from "../api";
 import "../Reviews.css";
 import Comments from "./Comments";
-import PostComment from "./Post-comment";
 
 const SingleReview = ({ user }) => {
   const [review, setReview] = useState();
@@ -36,7 +35,7 @@ const SingleReview = ({ user }) => {
           <p id="loading-text">Loading Review...</p>
         </div>
       ) : (
-        <div className="single-review-card">
+        <div className="single-review-card" key={`key-${review.review_id}`}>
           <p id="single-review-id">- Review id: {review.review_id} -</p>
           <p id="single-review-title">{review.title}</p>
           <p id="review-designer">Designed by: {review.designer}</p>

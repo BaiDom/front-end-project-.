@@ -25,10 +25,9 @@ const Categories = ({ currCategory, setCurrCategory }) => {
         <section id="category-card-container">
           {categoryList.map((category) => {
             return (
-              <article id="category-list-card">
+              <article id="category-list-card" key={category.slug}>
                 <Link
                   to={`/${category.slug}`}
-                  key={category.slug}
                   id={`category-link-${category.slug}`}
                   onClick={() => {
                     setCurrCategory(category.slug);
