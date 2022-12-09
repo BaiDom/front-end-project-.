@@ -26,13 +26,22 @@ const ReviewsCategory = ({ currCategory, setCurrCategory }) => {
           {categoryList.map((review) => {
             return (
               <article className="review-card" id="review-cat-card">
-                <p id="review-title">{review.title}</p>
-                <p id="review-designer">Designed by:{review.designer}</p>
-                <img
-                  src={review.review_img_url}
-                  id="review-img"
-                  alt={review.title}
-                ></img>
+                <Link
+                  to={`/reviews/${review.review_id}`}
+                  key={review.id}
+                  className="review-card-link"
+                  id={`review-card-link-${review.review_id}`}
+                >
+                  <p id="review-title">{review.title}</p>
+                  <p id="review-designer">Designed by:{review.designer}</p>
+                  <p id="review-category">Category: {review.category}</p>
+                  <img
+                    src={review.review_img_url}
+                    id="review-img"
+                    alt={review.title}
+                  ></img>
+                  <p id="click">Click for full review!</p>
+                </Link>
                 <Link
                   to={`/reviews/${review.review_id}/comments`}
                   className="comments-link"

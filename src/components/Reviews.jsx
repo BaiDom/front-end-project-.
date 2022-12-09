@@ -39,24 +39,24 @@ const Reviews = ({ currCategory, setCurrCategory }) => {
             return (
               <article key={review.id}>
                 <li key={review.id} className="review-card">
-                  <Link
-                    to={`/reviews/${review.review_id}`}
-                    key={review.id}
-                    className="review-card-link"
-                    id={`review-card-link-${review.review_id}`}
-                  >
-                    <p id="review-title">{review.title}</p>
-                    <p id="review-designer">Designed by: {review.designer}</p>
-                    <p id="review-category">Category: {review.category}</p>
-                    <img
-                      src={review.review_img_url}
-                      id="review-img"
-                      alt={review.title}
-                    ></img>
-                    <p id="click">Click for full review!</p>
-                  </Link>
-                  <div className="review-grid-container">
-                    <div id="review-card-internal">
+                  <p id="review-title">{review.title}</p>
+                  <div id="review-card-internal">
+                    <Link
+                      to={`/reviews/${review.review_id}`}
+                      key={review.id}
+                      className="review-card-link"
+                      id={`review-card-link-${review.review_id}`}
+                    >
+                      <p id="review-designer">Designed by: {review.designer}</p>
+                      <p id="review-category">Category: {review.category}</p>
+                      <img
+                        src={review.review_img_url}
+                        id="review-img"
+                        alt={review.title}
+                      ></img>
+                      <p id="click">Click for full review!</p>
+                    </Link>
+                    <div className="review-grid-container">
                       <Link
                         to={`/reviews/${review.review_id}/comments`}
                         className="comments-link"

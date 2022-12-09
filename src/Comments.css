@@ -111,6 +111,7 @@
 /* #comment-grid-container {
   display: grid;
   grid-template: min-content;
+  grid-template-columns: auto auto;
   padding: 5%;
   margin: auto;
   margin-bottom: 0.5%;
