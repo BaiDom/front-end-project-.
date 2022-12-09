@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getReviewById, updateUpVotes } from "../api";
 import "../Reviews.css";
+import Comments from "./Comments";
 
-const SingleReview = () => {
-  const [review, setReview] = useState([]);
+const SingleReview = ({ user }) => {
+  const [review, setReview] = useState();
   const [isLoading, setIsLoading] = useState(true);
   let { review_id } = useParams();
   const [err, setErr] = useState(null);
@@ -34,7 +35,7 @@ const SingleReview = () => {
           <p id="loading-text">Loading Review...</p>
         </div>
       ) : (
-        <div className="single-review-card">
+        <div className="single-review-card" key={`key-${review.review_id}`}>
           <p id="single-review-id">- Review id: {review.review_id} -</p>
           <p id="single-review-title">{review.title}</p>
           <p id="review-designer">Designed by: {review.designer}</p>
@@ -47,14 +48,10 @@ const SingleReview = () => {
           <div id="single-review-card-internal">
             <p id="review-body">{review.review_body}</p>
             <div className="single-review-grid-container">
-              <Link
-                to={`/reviews/${review.review_id}/comments`}
-                id="comments-link"
-              >
-                <p id="single-review-comment-count">
-                  No. of comments: {review.comment_count}
-                </p>
-              </Link>
+              <p id="single-review-comment-count">
+                No. of comments: {review.comment_count}
+              </p>
+
               <div id="single-review-vote-container">
                 <p id="single-review-votes">Votes for this review: {vote}</p>
                 <button
@@ -80,6 +77,7 @@ const SingleReview = () => {
           </div>
         </div>
       )}
+      <Comments vote={vote} review={review} user={user} />
     </div>
   );
 };

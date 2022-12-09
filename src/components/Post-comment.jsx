@@ -1,6 +1,12 @@
 import "../Post-comment.css";
 
-const PostComment = ({ newComment, setNewComment, handleSubmit, user }) => {
+const PostComment = ({
+  newComment,
+  setNewComment,
+  handleSubmit,
+  user,
+  review,
+}) => {
   return (
     <section id="comment-input-container">
       <form
@@ -9,9 +15,10 @@ const PostComment = ({ newComment, setNewComment, handleSubmit, user }) => {
         onSubmit={handleSubmit}
       >
         <label htmlFor="newComment" id="add-comment-text">
-          Add a comment for this review
+          Add a comment!
         </label>
         <textarea
+          placeholder="Add your comment here!"
           name="comment-form-input"
           id="newComment"
           value={newComment}

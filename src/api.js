@@ -4,10 +4,12 @@ const gamesApi = axios.create({
   baseURL: "https://dead-puce-abalone-cap.cyclic.app/api",
 });
 
-export const getReviews = () => {
-  return gamesApi.get("/reviews").then(({ data: { reviews } }) => {
-    return reviews;
-  });
+export const getReviews = (category) => {
+  return gamesApi
+    .get("/reviews", { params: { category } })
+    .then(({ data: { reviews } }) => {
+      return reviews;
+    });
 };
 
 export const getReviewById = (review_id) => {
@@ -44,7 +46,7 @@ export const postComment = (review_id, commentObj) => {
 };
 
 export const getCategories = () => {
-  return gamesApi.get("/api/categegories").then(({ Data }) => {
-    console.log(Data, "data for categories");
+  return gamesApi.get("/categories").then(({ data: { categories } }) => {
+    return categories;
   });
 };

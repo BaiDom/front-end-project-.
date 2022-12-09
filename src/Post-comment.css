@@ -19,6 +19,7 @@
   font-family: Georgia;
   font-weight: 900;
   font-size: 1.5rem;
+  overflow: auto;
 }
 
 #post-comment-button {

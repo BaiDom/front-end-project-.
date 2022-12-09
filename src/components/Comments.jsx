@@ -5,7 +5,7 @@ import "../Comments.css";
 import PostComment from "./Post-comment";
 import swal from "sweetalert";
 
-const Comments = ({ user, setUser }) => {
+const Comments = ({ user, review }) => {
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState("");
   const [isLoading, setIsLoading] = useState(true);
@@ -55,9 +55,8 @@ const Comments = ({ user, setUser }) => {
         <div>
           {comments.length === 0 ? (
             <div id="no-comments-text">
-              <p>
-                There are currently no comments for this review, would you like
-                to add one?
+              <p id="no-comments-info">
+                There are no comments for this review yet...
               </p>
               <PostComment
                 newComment={newComment}
@@ -77,17 +76,17 @@ const Comments = ({ user, setUser }) => {
                   user={user}
                 />
               </div>
-              <ul id="comment-ul">
+              <ul id="comment-ul" key={`ul-${newComment.review_id}`}>
                 {comments.map((comment) => {
                   return (
-                    <div id="comment-grid-container">
+                    <div
+                      id="comment-grid-container"
+                      key={`comment-${comment.comment_id}`}
+                    >
                       <li id="comment-card">
                         <article id="comment-article">
                           <p id="comment-review-id">
                             - Review id: {comment.review_id} -
-                          </p>
-                          <p id="comment-votes">
-                            Votes for this review: {comment.votes}
                           </p>
                           <div id="comment-card-internal">
                             <p id="comment-body">{comment.body}</p>
