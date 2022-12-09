@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../Nav.css";
 
-const Nav = ({ user, currCategory, setCurrCategory }) => {
+const Nav = ({ user, currCategory, setCurrCategory, review, setReview }) => {
   return (
     <nav className="nav">
       <Link to="/" className="nav-link" id="nav-link-home">
@@ -13,6 +13,7 @@ const Nav = ({ user, currCategory, setCurrCategory }) => {
         id="nav-link-reviews"
         onClick={() => {
           setCurrCategory("");
+          setReview("");
         }}
       >
         Reviews

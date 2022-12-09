@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getReviewById, updateUpVotes } from "../api";
 import "../Reviews.css";
+import Comments from "./Comments";
+import PostComment from "./Post-comment";
 
-const SingleReview = () => {
-  const [review, setReview] = useState([]);
+const SingleReview = ({ user }) => {
+  const [review, setReview] = useState();
   const [isLoading, setIsLoading] = useState(true);
   let { review_id } = useParams();
   const [err, setErr] = useState(null);
@@ -47,14 +49,10 @@ const SingleReview = () => {
           <div id="single-review-card-internal">
             <p id="review-body">{review.review_body}</p>
             <div className="single-review-grid-container">
-              <Link
-                to={`/reviews/${review.review_id}/comments`}
-                id="comments-link"
-              >
-                <p id="single-review-comment-count">
-                  No. of comments: {review.comment_count}
-                </p>
-              </Link>
+              <p id="single-review-comment-count">
+                No. of comments: {review.comment_count}
+              </p>
+
               <div id="single-review-vote-container">
                 <p id="single-review-votes">Votes for this review: {vote}</p>
                 <button
@@ -80,6 +78,7 @@ const SingleReview = () => {
           </div>
         </div>
       )}
+      <Comments vote={vote} review={review} user={user} />
     </div>
   );
 };

@@ -57,15 +57,8 @@ const Reviews = ({ currCategory, setCurrCategory }) => {
                       <p id="click">Click for full review!</p>
                     </Link>
                     <div className="review-grid-container">
-                      <Link
-                        to={`/reviews/${review.review_id}/comments`}
-                        className="comments-link"
-                        id={`comments-link-${review.review_id}`}
-                      >
-                        <p id="comment-count">
-                          {review.comment_count} Comments
-                        </p>
-                      </Link>
+                      <p id="comment-count">{review.comment_count} Comments</p>
+
                       <div id="review-vote-container">
                         <p id="votes">Votes for this review: {review.votes}</p>
                       </div>

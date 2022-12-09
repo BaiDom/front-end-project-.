@@ -13,7 +13,6 @@ import ReviewsCategory from "./components/Reviews-category";
 function App() {
   const [user, setUser] = useState("cooljmessy");
   const [currCategory, setCurrCategory] = useState("");
-  console.log(currCategory, "current category in app");
   return (
     <div className="App">
       <Header className="App-header" user={user} />
@@ -33,9 +32,12 @@ function App() {
           }
         ></Route>
         <Route path="/" element={<Landing />}></Route>
-        <Route path="/reviews/:review_id" element={<SingleReview />}></Route>
         <Route
-          path={`/reviews?category=${currCategory}`}
+          path="/reviews/:review_id"
+          element={<SingleReview user={user} />}
+        ></Route>
+        <Route
+          path={`/:category`}
           element={
             <ReviewsCategory
               currCategory={currCategory}

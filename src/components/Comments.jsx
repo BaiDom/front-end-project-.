@@ -5,7 +5,7 @@ import "../Comments.css";
 import PostComment from "./Post-comment";
 import swal from "sweetalert";
 
-const Comments = ({ user, setUser }) => {
+const Comments = ({ user, review }) => {
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState("");
   const [isLoading, setIsLoading] = useState(true);
@@ -84,9 +84,6 @@ const Comments = ({ user, setUser }) => {
                         <article id="comment-article">
                           <p id="comment-review-id">
                             - Review id: {comment.review_id} -
-                          </p>
-                          <p id="comment-votes">
-                            Votes for this review: {comment.votes}
                           </p>
                           <div id="comment-card-internal">
                             <p id="comment-body">{comment.body}</p>

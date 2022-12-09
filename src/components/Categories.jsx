@@ -27,7 +27,7 @@ const Categories = ({ currCategory, setCurrCategory }) => {
             return (
               <article id="category-list-card">
                 <Link
-                  to={`/reviews?category=${category.slug}`}
+                  to={`/${category.slug}`}
                   key={category.slug}
                   id={`category-link-${category.slug}`}
                   onClick={() => {

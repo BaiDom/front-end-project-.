@@ -1,18 +1,20 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { getReviewByCategory } from "../api";
+import { Link, useParams } from "react-router-dom";
+import { getReviewByCategory, getReviews } from "../api";
 import "../Reviews.css";
 
 const ReviewsCategory = ({ currCategory, setCurrCategory }) => {
   const [categoryList, setCategoryList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  let { category } = useParams();
+
   useEffect(() => {
-    getReviewByCategory(currCategory).then((reviews) => {
+    getReviews(category).then((reviews) => {
       setCategoryList(reviews);
       setIsLoading(false);
     });
-  }, [currCategory]);
+  }, [category]);
 
   return (
     <section>
