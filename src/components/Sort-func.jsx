@@ -10,21 +10,21 @@ const ReviewSort = ({ sortBy, setSortBy }) => {
             setSortBy("created_at");
           }}
         >
-          -Date added-
+          <span id="drop-dot">&#183; </span> Date added
         </p>
         <p
           onClick={() => {
             setSortBy("comment_count");
           }}
         >
-          -No. of Comments-
+          <span id="drop-dot">&#183; </span> No. of Comments
         </p>
         <p
           onClick={() => {
             setSortBy("votes");
           }}
         >
-          -No. of Votes-
+          <span id="drop-dot">&#183; </span> No. of Votes
         </p>
       </div>
     </div>

@@ -1,10 +1,12 @@
 .dropbtn {
-  background-color: #4caf50;
+  background-color: #860186;
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
+  margin-top: 4%;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -17,22 +19,28 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
+  background-color: #fce8c3;
+  min-width: 152px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 /* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
+.dropdown-content p {
+  color: #d037a2;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  font-size: large;
+  border: 1px solid #ff9671;
+  border-radius: 5px;
+}
+
+#drop-dot {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {
+.dropdown-content p:hover {
   background-color: #f1f1f1;
 }
 
@@ -43,5 +51,5 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-  background-color: #3e8e41;
+  background-color: #860186;
 }

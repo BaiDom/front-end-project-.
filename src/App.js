@@ -1,4 +1,3 @@
-import Header from "./components/Header";
 import "./App.css";
 import Nav from "./components/Nav";
 import { Route, Routes } from "react-router-dom";
@@ -16,7 +15,6 @@ function App() {
   const [sortBy, setSortBy] = useState(null);
   return (
     <div className="App">
-      <Header className="App-header" user={user} />
       <Nav
         user={user}
         currCategory={currCategory}

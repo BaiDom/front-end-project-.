@@ -28,7 +28,7 @@ const Comments = ({ user, review }) => {
 
     const form = document.forms["comment-form"]["comment-form-input"].value;
     if (form === "") {
-      swal("Hold up!", "Cannot post empty comment!", "error");
+      swal("Hold up!", "Cannot post an empty comment!", "error");
       return false;
     } else {
       postComment(review_id, commentObj)

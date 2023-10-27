@@ -20,6 +20,7 @@
   font-weight: 900;
   font-size: 1.5rem;
   overflow: auto;
+  cursor: pointer;
 }
 
 #post-comment-button {
@@ -32,6 +33,7 @@
   margin: auto;
   font-weight: 900;
   font-family: Georgia, "Times New Roman", Times, serif;
+  cursor: pointer;
 }
 
 #add-comment-text {
