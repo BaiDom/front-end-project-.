@@ -6,7 +6,10 @@
 
 .App {
   text-align: center;
-  background-color: #f8f7ff;
+  background-color: rgb(152, 149, 149);
+  --blue: #2191fb;
+  --navy: #29335c;
+  --orange: #e4572e;
 }
 
 .page-container {
