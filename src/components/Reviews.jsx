@@ -50,20 +50,19 @@ const Reviews = ({ currCategory, setCurrCategory, sortBy, setSortBy }) => {
                       id={`review-card-link-${review.review_id}`}
                     >
                       <p id="review-category">-&nbsp;{review.category}</p>
-                      <p id="review-title">{review.title}</p>
-                      <p id="review-designer">Designed by: {review.designer}</p>
+                      <div className="title-cont">
+                        <p id="review-title">{review.title}</p>
+                      </div>
                       <img
                         src={review.review_img_url}
                         id="review-img"
                         alt={review.title}
                       ></img>
-                      <p id="click">Click for full review!</p>
                     </Link>
-                    <p id="comment-count">{review.comment_count} Comments</p>
-
-                    <div id="review-vote-container">
-                      <p id="votes">Votes for this review: {review.votes}</p>
-                    </div>
+                    {/* <div id="review-vote-container">
+                      <div id="comment-count">💬 {review.comment_count}</div>
+                      <div id="votes">👍 {review.votes}</div>
+                    </div> */}
                   </div>
                 </article>
               );
