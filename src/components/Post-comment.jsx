@@ -1,4 +1,4 @@
-import "../Post-comment.css";
+import "../css/Post-comment.css";
 
 const PostComment = ({
   newComment,

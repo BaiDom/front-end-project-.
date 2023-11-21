@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getReviewById, updateUpVotes } from "../api";
-import "../Reviews.css";
+import "../css/Single-review.css";
 import Comments from "./Comments";
 
 const SingleReview = ({ user }) => {
@@ -29,55 +29,64 @@ const SingleReview = ({ user }) => {
   if (err) return <p>{err}</p>;
 
   return (
-    <div>
+    <div className="page-container sr-flex">
       {isLoading ? (
         <div>
           <p id="loading-text">Loading Review...</p>
         </div>
       ) : (
-        <div className="single-review-card" key={`key-${review.review_id}`}>
-          <p id="single-review-id">- Review id: {review.review_id} -</p>
-          <p id="single-review-title">{review.title}</p>
-          <p id="review-designer">Designed by: {review.designer}</p>
-          <p id="single-review-category">Category: {review.category}</p>
-          <img
-            src={review.review_img_url}
-            id="review-img"
-            alt={review.title}
-          ></img>
-          <div id="single-review-card-internal">
-            <p id="review-body">{review.review_body}</p>
-            <div className="single-review-grid-container">
-              <p id="single-review-comment-count">
-                No. of comments: {review.comment_count}
-              </p>
+        <div className="sixty">
+          <div className="single-review-card" key={`key-${review.review_id}`}>
+            <div className="single-card-top">
+              <p id="single-review-id">- Review id: {review.review_id} -</p>
+              <p id="single-review-category">- Category: {review.category} -</p>
+            </div>
 
-              <div id="single-review-vote-container">
-                <p id="single-review-votes">Votes for this review: {vote}</p>
-                <button
-                  className="review-vote-button"
-                  id="single-rev-up-vote"
-                  onClick={() => {
-                    handleVote(review.review_id, 1);
-                  }}
-                >
-                  👍
-                </button>
-                <button
-                  className="review-vote-button"
-                  id="single-rev-down-vote"
-                  onClick={() => {
-                    handleVote(review.review_id, -1);
-                  }}
-                >
-                  👎
-                </button>
+            <img
+              src={review.review_img_url}
+              id="single-review-img"
+              alt={review.title}
+            ></img>
+            <div id="single-review-card-internal">
+              <p id="single-review-title">{review.title}</p>
+              <p id="single-review-designer">Designed by: {review.designer}</p>
+              <div className="review-body-cont">
+                <p id="single-review-body">{review.review_body}</p>
+              </div>
+              <div className="single-review-grid-container">
+                <p id="single-review-comment-count">
+                  No. of comments: {review.comment_count}
+                </p>
+
+                <div id="single-review-vote-container">
+                  <p id="single-review-votes">Votes for this review: {vote}</p>
+                  <button
+                    className="review-vote-button"
+                    id="single-rev-up-vote"
+                    onClick={() => {
+                      handleVote(review.review_id, 1);
+                    }}
+                  >
+                    👍
+                  </button>
+                  <button
+                    className="review-vote-button"
+                    id="single-rev-down-vote"
+                    onClick={() => {
+                      handleVote(review.review_id, -1);
+                    }}
+                  >
+                    👎
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       )}
-      <Comments vote={vote} review={review} user={user} />
+      <div className="forty">
+        <Comments vote={vote} review={review} user={user} />
+      </div>
     </div>
   );
 };

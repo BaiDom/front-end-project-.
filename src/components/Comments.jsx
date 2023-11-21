@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getCommentsForReview, postComment } from "../api";
-import "../Comments.css";
+import "../css/Comments.css";
 import PostComment from "./Post-comment";
 import swal from "sweetalert";
 
@@ -48,7 +48,7 @@ const Comments = ({ user, review }) => {
   };
 
   return (
-    <div>
+    <section className="comments-section">
       {isLoading ? (
         <p id="loading-text">Loading Comments...</p>
       ) : (
@@ -67,15 +67,8 @@ const Comments = ({ user, review }) => {
             </div>
           ) : (
             <div>
-              <h2 id="comments-h2">Comments.</h2>
-              <div id="comment-card">
-                <PostComment
-                  newComment={newComment}
-                  setNewComment={setNewComment}
-                  handleSubmit={handleSubmit}
-                  user={user}
-                />
-              </div>
+              {/* <h2 id="comments-h2">Comments.</h2> */}
+
               <ul id="comment-ul" key={`ul-${newComment.review_id}`}>
                 {comments.map((comment) => {
                   return (
@@ -86,16 +79,17 @@ const Comments = ({ user, review }) => {
                       <li id="comment-card">
                         <article id="comment-article">
                           <p id="comment-review-id">
-                            - Review id: {comment.review_id} -
+                            {/* - Review id: {comment.review_id} - */}
                           </p>
                           <div id="comment-card-internal">
-                            <p id="comment-body">{comment.body}</p>
+                            <p id="comment-body">
+                              {" "}
+                              {comment.author}: {comment.body}
+                            </p>
                             <p id="comment-comment-id">
                               - Comment id: {comment.comment_id} -
                             </p>
-                            <p id="comment-author">
-                              Comment posted by: {comment.author}
-                            </p>
+
                             <p id="comment-created">({comment.created_at})</p>
                           </div>
                         </article>
@@ -104,11 +98,19 @@ const Comments = ({ user, review }) => {
                   );
                 })}
               </ul>
+              <div id="comment-card">
+                <PostComment
+                  newComment={newComment}
+                  setNewComment={setNewComment}
+                  handleSubmit={handleSubmit}
+                  user={user}
+                />
+              </div>
             </div>
           )}
         </div>
       )}
-    </div>
+    </section>
   );
 };
 

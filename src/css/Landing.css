@@ -1,0 +1,107 @@
+.landing-section {
+  height: 100vh;
+}
+
+#landing-body {
+  background-color: #294c60;
+  /* color: #29335c; */
+  color: white;
+  border-radius: 16px;
+  margin: auto;
+  padding: 5%;
+  margin-top: 3%;
+  width: 80%;
+  /* font-family: Georgia; */
+  font-weight: 600;
+  font-size: 2rem;
+  box-shadow: 0px 3px 5px 3px black;
+}
+
+.landing-text {
+  margin: 2%;
+}
+
+.landing-links {
+  margin-top: 20px;
+  width: 100%;
+  height: 1200px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  background-image: url("../Assets/Scrabble_board_-_English.svg");
+  background-image: url("../Assets/piotr-laskawski-gL7oJLJOb_I-unsplash.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.landing-links-cont {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.landing-link {
+  margin: 10px;
+  border-radius: 16px;
+  position: relative;
+  transition: all ease-in-out 0.2s;
+}
+
+.reviews-link-tile:hover,
+.categories-link-tile:hover {
+  transform: scale(1.1);
+}
+.landing-link-title {
+  font-size: 8rem;
+}
+
+.reviews-link,
+.categories-link {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+}
+
+.categories-link {
+  flex-direction: row-reverse;
+}
+
+.reviews-link-tile,
+.categories-link-tile {
+  border: 2px solid black;
+  box-shadow: 0px 2px 2px 2px black;
+  color: #0790b2;
+  text-shadow: black 0px 0px 1px;
+  font-weight: 900;
+  border-radius: 16px;
+  padding: 20px;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #e1d1b3;
+  position: relative;
+  transition: all ease-in-out 0.2s;
+}
+
+.scrab-num {
+  position: absolute;
+  bottom: 2%;
+  right: 5%;
+  font-size: 4rem;
+}
+
+.landing-link-right {
+  font-size: 2rem;
+  width: 50%;
+}

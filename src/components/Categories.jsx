@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getCategories } from "../api";
-import "../Category-list.css";
+import "../css/Category-list.css";
 
 const Categories = ({ currCategory, setCurrCategory }) => {
   const [categoryList, setCategoryList] = useState([]);

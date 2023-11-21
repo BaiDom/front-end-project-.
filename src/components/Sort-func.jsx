@@ -1,4 +1,4 @@
-import "../Review-sort.css";
+import "../css/Review-sort.css";
 
 const ReviewSort = ({ sortBy, setSortBy }) => {
   return (

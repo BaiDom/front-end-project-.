@@ -1,20 +1,17 @@
 #comment-input-container {
-  color: #860186;
   margin: auto;
+  padding: 5%;
   font-family: Georgia;
   font-weight: 900;
   width: 90%;
 }
 
 #newComment {
-  background-color: #fce8c3;
+  background-color: white;
   display: block;
   border: 5px solid #ff6f91;
   border-radius: 30px 30px 30px 2px;
   padding: 4%;
-  margin: auto;
-  margin-top: 2%;
-  margin-bottom: 3%;
   width: 100%;
   font-family: Georgia;
   font-weight: 900;
@@ -37,10 +34,10 @@
 }
 
 #add-comment-text {
-  font-size: 4vw;
+  font-size: 2rem;
 }
 
 #post-comment-as-text {
   margin-top: 2%;
-  font-size: 3.5vw;
+  font-size: 2rem;
 }
